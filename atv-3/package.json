@@ -1,0 +1,30 @@
+{
+  "name": "atv-3",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "paulo",
+  "contributors": [],
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "debug": "~2.6.9",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.2"
+  },
+  "main": "./src/bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/bin/www"
+  },
+  "license": "ISC",
+  "devDependencies": {},
+  "description": ""
+}

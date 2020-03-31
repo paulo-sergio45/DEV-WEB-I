@@ -1,0 +1,5 @@
+@media screen and (max-width: 500px) {
+    img#perfil {
+        margin-top: 65px;
+    }
+}
