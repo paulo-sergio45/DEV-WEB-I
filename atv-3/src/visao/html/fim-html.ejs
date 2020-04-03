@@ -4,7 +4,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
-<% if (pg=="lista") {%>
+<% if (pg=="lista")  {%>
 
     <script>
         var ctx = document.getElementById("myChart").getContext("2d");
@@ -71,13 +71,41 @@
                 ]
             },
             options: {
+                responsive: false,
                 title: {
                     display: true,
                     text: "casos por dia Covid-19"
                 },
+                tooltips: {
+                    mode: 'point',
+                    intersect: false,
+                },
+
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'tempo decorido'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'numero de caso'
+                        }
+                    }]
+                },
+                animation: {
+                    duration: 0 // general animation time
+                },
+
+
 
                 legend: {
                     position: "bottom",
+
                     labels: {
                         fontColor: "rgb(255, 99, 132)"
                     },
@@ -99,20 +127,12 @@
                         ci.getDatasetMeta(index).hidden = null;
                         ci.update();
 
-                    },
-                },
-                tooltips: {
-                    custom: function(tooltip) {
-                        if (!tooltip.opacity) {
-                            document.getElementById("canvas").style.cursor = "default";
-                            return;
-                        }
                     }
                 },
-                layout: {
 
-                }
+
             }
+
         });
     </script>
 
