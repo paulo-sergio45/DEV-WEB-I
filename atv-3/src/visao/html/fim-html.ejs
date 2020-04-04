@@ -83,28 +83,35 @@
 
                 scales: {
                     xAxes: [{
-                        display: true,
+                        display: false,
                         scaleLabel: {
                             display: true,
                             labelString: 'tempo decorido'
-                        }
+                        },
+
                     }],
                     yAxes: [{
                         display: true,
                         scaleLabel: {
                             display: true,
                             labelString: 'numero de caso'
-                        }
+                        },
+
                     }]
                 },
                 animation: {
                     duration: 0 // general animation time
                 },
 
+                hover: {
+                    animationDuration: 0 // duration of animations when hovering an item
+                },
 
 
                 legend: {
+                    display: false,
                     position: "bottom",
+                    align: "center",
 
                     labels: {
                         fontColor: "rgb(255, 99, 132)"
@@ -134,6 +141,24 @@
             }
 
         });
+
+        function showHide() {
+            var cham = document.getElementById("myChart")
+            if (myChart.options.legend.display) {
+                cham.style.height = "600px";
+                myChart.options.legend.display = false;
+                myChart.update();
+
+
+            } else {
+                cham.style.height = "800px";
+                myChart.options.legend.display = true;
+                myChart.update();
+
+            }
+
+
+        }
     </script>
 
     <% }else{ %>

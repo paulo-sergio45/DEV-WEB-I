@@ -1,14 +1,20 @@
 <%- include("html/ini-html"); %>
 
     <%- include("html/cabecario"); -%>
+
         <main>
+            <dir class="row"></dir>
             <div style="overflow: auto; ">
                 <div class="row">
                     <div class="s12 m12 l12">
-                        <canvas id="myChart" style="width: 1350px;height: 980px;"></canvas>
+                        <canvas id="myChart" style="width: 1340px;height: 600px;"></canvas>
                     </div>
                 </div>
+                <div class="s12 m12 l12 center">
+                    <a class="= btn-large waves-effect waves-light red" onclick="showHide()"><i class="material-icons">add</i></a>
+                </div>
             </div>
+            <div class="row"></div>
 
         </main>
         <%- include("html/rodape"); -%>
