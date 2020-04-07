@@ -3,20 +3,21 @@
     <%- include("html/cabecario"); -%>
 
         <main>
+            <div class="container" style=" min-width: 90%;">
 
-            <h3 class="center">Covid-19: Casos confirmados</h3>
-            <div style="overflow: auto; ">
-                <div class="row">
-                    <div class="s12 m12 l12">
-                        <canvas id="myChart" style="width: 1340px;height: 600px;"></canvas>
+                <h4 class="center">Covid-19: Casos confirmados</h4>
+                <div style="overflow: auto; ">
+                    <div class="row">
+                        <div class="s12 m12 l12">
+                            <canvas id="myChart" style="width: 1215px;height: 600px;"></canvas>
+                        </div>
+                    </div>
+                    <div class="s12 m12 l12 center">
+                        <a class="= btn-large waves-effect waves-light blue" onclick="showHide()"><i class="material-icons">add</i></a>
                     </div>
                 </div>
-                <div class="s12 m12 l12 center">
-                    <a class="= btn-large waves-effect waves-light blue" onclick="showHide()"><i class="material-icons">add</i></a>
-                </div>
+                <div class="row"></div>
             </div>
-            <div class="row"></div>
-
         </main>
         <%- include("html/rodape"); -%>
 

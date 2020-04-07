@@ -10,7 +10,7 @@ rotas.get('/favicon.ico', (req, res) => res.status(204));
 
 rotas.get("/", function(req, res, next) {
 
-    res.render("./lista.ejs", { covid: arqui, pg: "lista" });
+    res.render("./informacoes.ejs", { pg: "informacoes" });
 });
 
 rotas.get("/lista", function(req, res, next) {
@@ -21,6 +21,14 @@ rotas.get("/lista", function(req, res, next) {
 rotas.get("/tabela", function(req, res, next) {
 
     res.render("./tabela.ejs", { covid: arqui, pg: "tabela" });
+});
+rotas.get("/informacoes", function(req, res, next) {
+
+    res.render("./informacoes.ejs", { pg: "informacoes" });
+});
+rotas.get("/prevencao", function(req, res, next) {
+
+    res.render("./prevencao.ejs", { pg: "prevencao" });
 });
 
 module.exports = rotas;

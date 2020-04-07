@@ -143,15 +143,14 @@
         });
 
         function showHide() {
-            var cham = document.getElementById("myChart")
+
             if (myChart.options.legend.display) {
-                cham.style.height = "600px";
                 myChart.options.legend.display = false;
+                myChart.options.responsive = true;
                 myChart.update();
 
 
             } else {
-                cham.style.height = "800px";
                 myChart.options.legend.display = true;
                 myChart.update();
 
