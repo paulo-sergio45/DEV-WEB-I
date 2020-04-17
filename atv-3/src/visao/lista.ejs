@@ -1,24 +1,25 @@
 <%- include("html/ini-html"); %>
 
-    <%- include("html/cabecario"); -%>
+<%- include("html/cabecario"); -%>
 
-        <main>
-            <div class="container" style=" min-width: 90%;">
+<main>
+    <div class="container" style=" min-width: 90%;">
 
-                <h4 class="center">Covid-19: Casos confirmados</h4>
-                <div style="overflow: auto; ">
-                    <div class="row">
-                        <div class="s12 m12 l12">
-                            <canvas id="myChart" style="width: 1215px;height: 600px;"></canvas>
-                        </div>
-                    </div>
-                    <div class="s12 m12 l12 center">
-                        <a class="= btn-large waves-effect waves-light blue" onclick="showHide()"><i class="material-icons">add</i></a>
-                    </div>
+        <h4 class="center">Covid-19: Casos confirmados</h4>
+        <div style="overflow: auto; ">
+            <div class="row">
+                <div class="s12 m12 l12">
+                    <canvas id="myChart" style="width: 1215px;height: 600px;"></canvas>
                 </div>
-                <div class="row"></div>
             </div>
-        </main>
-        <%- include("html/rodape"); -%>
+            <div class="s12 m12 l12 center">
+                <a class="= btn-large waves-effect waves-light blue" onclick="showHide()"><i
+                        class="material-icons">add</i></a>
+            </div>
+        </div>
+        <div class="row"></div>
+    </div>
+</main>
+<%- include("html/rodape"); -%>
 
-            <%- include("html/fim-html"); -%>
+<%- include("html/fim-html"); -%>

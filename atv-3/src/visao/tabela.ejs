@@ -1,316 +1,316 @@
 <%- include("html/ini-html"); %>
 
-    <%- include("html/cabecario"); -%>
-        <dir class="row"></dir>
-        <main>
-            <h4 class="center">Covid-19: Casos confirmados</h4>
-            <div class="container " style="overflow: auto; height: 85vh; min-width: 90%;">
+<%- include("html/cabecario"); -%>
+<dir class="row"></dir>
+<main>
+    <h4 class="center">Covid-19: Casos confirmados</h4>
+    <div class="container " style="overflow: auto; height: 85vh; min-width: 90%;">
 
 
-                <div class="c row">
-                    <div class="col s12 m12  ">
+        <div class="c row">
+            <div class="col s12 m12  ">
 
 
-                        <table id="tabela01" class="responsive-table centered highlight">
-                            <thead>
-                                <tr>
-                                    <th>Pais</th>
-                                    <th onclick="sortTable(1)">23/1/20&darr;</th>
-                                    <th onclick="sortTable(2)">24/1/20&darr; </th>
-                                    <th onclick="sortTable(3)">25/1/20&darr; </th>
-                                    <th onclick="sortTable(4)">26/1/20&darr; </th>
-                                    <th onclick="sortTable(5)">27/1/20&darr; </th>
-                                    <th onclick="sortTable(6)">28/1/20&darr; </th>
-                                    <th onclick="sortTable(7)">29/1/20&darr; </th>
-                                    <th onclick="sortTable(8)">30/1/20&darr; </th>
-                                    <th onclick="sortTable(9)">31/1/20&darr; </th>
-                                    <th onclick="sortTable(10)">1/2/20&darr; </th>
-                                    <th onclick="sortTable(11)">2/2/20&darr; </th>
-                                    <th onclick="sortTable(12)">3/2/20&darr; </th>
-                                    <th onclick="sortTable(13)">4/2/20&darr; </th>
-                                    <th onclick="sortTable(14)">5/2/20&darr; </th>
-                                    <th onclick="sortTable(15)">6/2/20&darr; </th>
-                                    <th onclick="sortTable(16)">7/2/20&darr; </th>
-                                    <th onclick="sortTable(17)">8/2/20&darr; </th>
-                                    <th onclick="sortTable(18)">9/2/20&darr; </th>
-                                    <th onclick="sortTable(19)">10/2/20&darr; </th>
-                                    <th onclick="sortTable(20)">11/2/20&darr; </th>
-                                    <th onclick="sortTable(21)">12/2/20&darr; </th>
-                                    <th onclick="sortTable(22)">13/2/20&darr; </th>
-                                    <th onclick="sortTable(23)">14/2/20&darr; </th>
-                                    <th onclick="sortTable(24)">15/2/20&darr; </th>
-                                    <th onclick="sortTable(25)">16/2/20&darr; </th>
-                                    <th onclick="sortTable(26)">17/2/20&darr; </th>
-                                    <th onclick="sortTable(27)">18/2/20&darr; </th>
-                                    <th onclick="sortTable(28)">19/2/20&darr; </th>
-                                    <th onclick="sortTable(29)">20/2/20&darr; </th>
-                                    <th onclick="sortTable(30)">21/2/20&darr; </th>
-                                    <th onclick="sortTable(31)">22/2/20&darr; </th>
-                                    <th onclick="sortTable(32)">23/2/20&darr; </th>
-                                    <th onclick="sortTable(33)">24/2/20&darr; </th>
-                                    <th onclick="sortTable(34)">25/2/20&darr; </th>
-                                    <th onclick="sortTable(35)">26/2/20&darr; </th>
-                                    <th onclick="sortTable(36)">27/2/20&darr; </th>
-                                    <th onclick="sortTable(37)">28/2/20&darr; </th>
-                                    <th onclick="sortTable(38)">29/2/20&darr; </th>
-                                    <th onclick="sortTable(39)">1/3/20&darr; </th>
-                                    <th onclick="sortTable(40)">2/3/20&darr; </th>
-                                    <th onclick="sortTable(41)">3/3/20&darr; </th>
-                                    <th onclick="sortTable(42)">4/3/20&darr; </th>
-                                    <th onclick="sortTable(43)">5/3/20&darr; </th>
-                                    <th onclick="sortTable(44)">6/3/20&darr; </th>
-                                    <th onclick="sortTable(45)">7/3/20&darr; </th>
-                                    <th onclick="sortTable(46)">8/3/20&darr; </th>
-                                    <th onclick="sortTable(47)">9/3/20&darr; </th>
-                                    <th onclick="sortTable(48)">10/3/20&darr; </th>
-                                    <th onclick="sortTable(49)">11/3/20&darr; </th>
-                                    <th onclick="sortTable(50)">12/3/20&darr; </th>
-                                    <th onclick="sortTable(51)">13/3/20&darr; </th>
-                                    <th onclick="sortTable(52)">14/3/20&darr; </th>
-                                    <th onclick="sortTable(53)">15/3/20&darr; </th>
-                                    <th onclick="sortTable(54)">16/3/20&darr; </th>
-                                    <th onclick="sortTable(55)">17/3/20&darr; </th>
-                                    <th onclick="sortTable(56)">18/3/20&darr; </th>
-                                    <th onclick="sortTable(57)">19/3/20&darr; </th>
-                                    <th onclick="sortTable(58)">20/3/20&darr; </th>
-                                    <th onclick="sortTable(59)">21/3/20&darr; </th>
-                                    <th onclick="sortTable(60)">22/3/20&darr; </th>
-                                    <th onclick="sortTable(61)">23/3/20&darr; </th>
-                                    <th onclick="sortTable(62)">24/3/20&darr; </th>
-                                    <th onclick="sortTable(63)">25/3/20&darr; </th>
-                                    <th onclick="sortTable(64)">26/3/20&darr; </th>
-                                    <th onclick="sortTable(65)">27/3/20&darr; </th>
-                                    <th onclick="sortTable(66)">28/3/20&darr; </th>
-                                    <th onclick="sortTable(67)">29/3/20&darr; </th>
-                                </tr>
-                            </thead>
+                <table id="tabela01" class="responsive-table centered highlight">
+                    <thead>
+                        <tr>
+                            <th>Pais</th>
+                            <th onclick="sortTable(1)">23/1/20&darr;</th>
+                            <th onclick="sortTable(2)">24/1/20&darr; </th>
+                            <th onclick="sortTable(3)">25/1/20&darr; </th>
+                            <th onclick="sortTable(4)">26/1/20&darr; </th>
+                            <th onclick="sortTable(5)">27/1/20&darr; </th>
+                            <th onclick="sortTable(6)">28/1/20&darr; </th>
+                            <th onclick="sortTable(7)">29/1/20&darr; </th>
+                            <th onclick="sortTable(8)">30/1/20&darr; </th>
+                            <th onclick="sortTable(9)">31/1/20&darr; </th>
+                            <th onclick="sortTable(10)">1/2/20&darr; </th>
+                            <th onclick="sortTable(11)">2/2/20&darr; </th>
+                            <th onclick="sortTable(12)">3/2/20&darr; </th>
+                            <th onclick="sortTable(13)">4/2/20&darr; </th>
+                            <th onclick="sortTable(14)">5/2/20&darr; </th>
+                            <th onclick="sortTable(15)">6/2/20&darr; </th>
+                            <th onclick="sortTable(16)">7/2/20&darr; </th>
+                            <th onclick="sortTable(17)">8/2/20&darr; </th>
+                            <th onclick="sortTable(18)">9/2/20&darr; </th>
+                            <th onclick="sortTable(19)">10/2/20&darr; </th>
+                            <th onclick="sortTable(20)">11/2/20&darr; </th>
+                            <th onclick="sortTable(21)">12/2/20&darr; </th>
+                            <th onclick="sortTable(22)">13/2/20&darr; </th>
+                            <th onclick="sortTable(23)">14/2/20&darr; </th>
+                            <th onclick="sortTable(24)">15/2/20&darr; </th>
+                            <th onclick="sortTable(25)">16/2/20&darr; </th>
+                            <th onclick="sortTable(26)">17/2/20&darr; </th>
+                            <th onclick="sortTable(27)">18/2/20&darr; </th>
+                            <th onclick="sortTable(28)">19/2/20&darr; </th>
+                            <th onclick="sortTable(29)">20/2/20&darr; </th>
+                            <th onclick="sortTable(30)">21/2/20&darr; </th>
+                            <th onclick="sortTable(31)">22/2/20&darr; </th>
+                            <th onclick="sortTable(32)">23/2/20&darr; </th>
+                            <th onclick="sortTable(33)">24/2/20&darr; </th>
+                            <th onclick="sortTable(34)">25/2/20&darr; </th>
+                            <th onclick="sortTable(35)">26/2/20&darr; </th>
+                            <th onclick="sortTable(36)">27/2/20&darr; </th>
+                            <th onclick="sortTable(37)">28/2/20&darr; </th>
+                            <th onclick="sortTable(38)">29/2/20&darr; </th>
+                            <th onclick="sortTable(39)">1/3/20&darr; </th>
+                            <th onclick="sortTable(40)">2/3/20&darr; </th>
+                            <th onclick="sortTable(41)">3/3/20&darr; </th>
+                            <th onclick="sortTable(42)">4/3/20&darr; </th>
+                            <th onclick="sortTable(43)">5/3/20&darr; </th>
+                            <th onclick="sortTable(44)">6/3/20&darr; </th>
+                            <th onclick="sortTable(45)">7/3/20&darr; </th>
+                            <th onclick="sortTable(46)">8/3/20&darr; </th>
+                            <th onclick="sortTable(47)">9/3/20&darr; </th>
+                            <th onclick="sortTable(48)">10/3/20&darr; </th>
+                            <th onclick="sortTable(49)">11/3/20&darr; </th>
+                            <th onclick="sortTable(50)">12/3/20&darr; </th>
+                            <th onclick="sortTable(51)">13/3/20&darr; </th>
+                            <th onclick="sortTable(52)">14/3/20&darr; </th>
+                            <th onclick="sortTable(53)">15/3/20&darr; </th>
+                            <th onclick="sortTable(54)">16/3/20&darr; </th>
+                            <th onclick="sortTable(55)">17/3/20&darr; </th>
+                            <th onclick="sortTable(56)">18/3/20&darr; </th>
+                            <th onclick="sortTable(57)">19/3/20&darr; </th>
+                            <th onclick="sortTable(58)">20/3/20&darr; </th>
+                            <th onclick="sortTable(59)">21/3/20&darr; </th>
+                            <th onclick="sortTable(60)">22/3/20&darr; </th>
+                            <th onclick="sortTable(61)">23/3/20&darr; </th>
+                            <th onclick="sortTable(62)">24/3/20&darr; </th>
+                            <th onclick="sortTable(63)">25/3/20&darr; </th>
+                            <th onclick="sortTable(64)">26/3/20&darr; </th>
+                            <th onclick="sortTable(65)">27/3/20&darr; </th>
+                            <th onclick="sortTable(66)">28/3/20&darr; </th>
+                            <th onclick="sortTable(67)">29/3/20&darr; </th>
+                        </tr>
+                    </thead>
 
-                            <tbody>
-
-
-                                <% for (var i = 0; i < covid.length; i++) { %>
-                                    <tr>
-                                        <td>
-                                            <%= covid[i].city %>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes1_23_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes1_24_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes1_25_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes1_26_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes1_27_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes1_28_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes1_29_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes1_30_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes1_31_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_1_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_2_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_3_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_4_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_5_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_6_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_7_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_8_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_9_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_10_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_11_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_12_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_13_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_14_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_15_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_16_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_17_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_18_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_19_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_20_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_21_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_22_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_23_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_24_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_25_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_26_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_27_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_28_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes2_29_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_1_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_2_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_3_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_4_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_5_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_6_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_7_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_8_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_9_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_10_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_11_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_12_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_13_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_14_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_15_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_16_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_17_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_18_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_19_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_20_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_21_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_22_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_23_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_24_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_25_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_26_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_27_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_28_20%>
-                                        </td>
-                                        <td>
-                                            <%=covid[i].mes3_29_20%>
-                                                <td>
-                                    </tr>
-                                    <% } %>
+                    <tbody>
 
 
+                        <% for (var i = 0; i < covid.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= covid[i].city %>
+                            </td>
+                            <td>
+                                <%=covid[i].mes1_23_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes1_24_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes1_25_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes1_26_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes1_27_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes1_28_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes1_29_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes1_30_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes1_31_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_1_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_2_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_3_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_4_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_5_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_6_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_7_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_8_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_9_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_10_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_11_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_12_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_13_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_14_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_15_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_16_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_17_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_18_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_19_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_20_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_21_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_22_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_23_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_24_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_25_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_26_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_27_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_28_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes2_29_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_1_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_2_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_3_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_4_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_5_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_6_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_7_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_8_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_9_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_10_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_11_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_12_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_13_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_14_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_15_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_16_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_17_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_18_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_19_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_20_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_21_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_22_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_23_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_24_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_25_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_26_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_27_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_28_20%>
+                            </td>
+                            <td>
+                                <%=covid[i].mes3_29_20%>
+                            <td>
+                        </tr>
+                        <% } %>
 
 
-                            </tbody>
-                        </table>
 
 
-                    </div>
-                </div>
+                    </tbody>
+                </table>
+
+
             </div>
+        </div>
+    </div>
 
 
-        </main>
+</main>
 
-        <%- include("html/rodape"); -%>
+<%- include("html/rodape"); -%>
 
-            <%- include("html/fim-html"); -%>
+<%- include("html/fim-html"); -%>

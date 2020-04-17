@@ -6,166 +6,166 @@
 
 <% if (pg=="lista")  {%>
 
-    <script>
-        var ctx = document.getElementById("myChart").getContext("2d");
-        var myChart = new Chart(ctx, {
-            type: "line",
-            data: {
-                labels: ["23/1/20", "24/1/20", "25/1/20", "26/1/20", "27/1/20", "28/1/20",
-                    "29/1/20", "30/1/20", "31/1/20", "1/2/20", "2/2/20", "3/2/20", "4/2/20",
-                    "5/2/20", "6/2/20", "7/2/20", "8/2/20", "9/2/20", "10/2/20", "11/2/20",
-                    "12/2/20", "13/2/20", "14/2/20", "15/2/20", "16/2/20", "17/2/20", "18/2/20",
-                    "19/2/20", "20/2/20", "21/2/20", "22/2/20", "23/2/20", "24/2/20", "25/2/20",
-                    "26/2/20", "27/2/20", "28/2/20", "29/2/20", "1/3/20", "2/3/20", "3/3/20",
-                    "4/3/20", "5/3/20", "6/3/20", "7/3/20", "8/3/20", "9/3/20", "10/3/20",
-                    "11/3/20", "12/3/20", "13/3/20", "14/3/20", "15/3/20", "16/3/20", "17/3/20",
-                    "18/3/20", "19/3/20", "20/3/20", "21/3/20", "22/3/20", "23/3/20", "24/3/20",
-                    "25/3/20", "26/3/20", "27/3/20", "28/3/20", "29/3/20"
-                ],
-                datasets: [
-                    <% for (var i = 0; i < covid.length; i++) { %>
+<script>
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: ["23/1/20", "24/1/20", "25/1/20", "26/1/20", "27/1/20", "28/1/20",
+                "29/1/20", "30/1/20", "31/1/20", "1/2/20", "2/2/20", "3/2/20", "4/2/20",
+                "5/2/20", "6/2/20", "7/2/20", "8/2/20", "9/2/20", "10/2/20", "11/2/20",
+                "12/2/20", "13/2/20", "14/2/20", "15/2/20", "16/2/20", "17/2/20", "18/2/20",
+                "19/2/20", "20/2/20", "21/2/20", "22/2/20", "23/2/20", "24/2/20", "25/2/20",
+                "26/2/20", "27/2/20", "28/2/20", "29/2/20", "1/3/20", "2/3/20", "3/3/20",
+                "4/3/20", "5/3/20", "6/3/20", "7/3/20", "8/3/20", "9/3/20", "10/3/20",
+                "11/3/20", "12/3/20", "13/3/20", "14/3/20", "15/3/20", "16/3/20", "17/3/20",
+                "18/3/20", "19/3/20", "20/3/20", "21/3/20", "22/3/20", "23/3/20", "24/3/20",
+                "25/3/20", "26/3/20", "27/3/20", "28/3/20", "29/3/20"
+            ],
+            datasets: [
+                    <% for(var i = 0; i<covid.length; i++) { %>
                     <%= "{" %>
-                    label: "<%= covid[i].city %>",
-                    data: [
-                        "<%=covid[i].mes1_23_20%>", "<%=covid[i].mes1_24_20%>",
-                        "<%=covid[i].mes1_25_20%>", "<%=covid[i].mes1_26_20%>",
-                        "<%=covid[i].mes1_27_20%>", "<%=covid[i].mes1_28_20%>",
-                        "<%=covid[i].mes1_29_20%>", "<%=covid[i].mes1_30_20%>",
-                        "<%=covid[i].mes1_31_20%>", "<%=covid[i].mes2_1_20%>",
-                        "<%=covid[i].mes2_2_20%>", "<%=covid[i].mes2_3_20%>",
-                        "<%=covid[i].mes2_4_20%>", "<%=covid[i].mes2_5_20%>",
-                        "<%=covid[i].mes2_6_20%>", "<%=covid[i].mes2_7_20%>",
-                        "<%=covid[i].mes2_8_20%>", "<%=covid[i].mes2_9_20%>",
-                        "<%=covid[i].mes2_10_20%>", "<%=covid[i].mes2_11_20%>",
-                        "<%=covid[i].mes2_12_20%>", "<%=covid[i].mes2_13_20%>",
-                        "<%=covid[i].mes2_14_20%>", "<%=covid[i].mes2_15_20%>",
-                        "<%=covid[i].mes2_16_20%>", "<%=covid[i].mes2_17_20%>",
-                        "<%=covid[i].mes2_18_20%>", "<%=covid[i].mes2_19_20%>",
-                        "<%=covid[i].mes2_20_20%>", "<%=covid[i].mes2_21_20%>",
-                        "<%=covid[i].mes2_22_20%>", "<%=covid[i].mes2_23_20%>",
-                        "<%=covid[i].mes2_24_20%>", "<%=covid[i].mes2_25_20%>",
-                        "<%=covid[i].mes2_26_20%>", "<%=covid[i].mes2_27_20%>",
-                        "<%=covid[i].mes2_28_20%>", "<%=covid[i].mes2_29_20%>",
-                        "<%=covid[i].mes3_1_20%>", "<%=covid[i].mes3_2_20%>",
-                        "<%=covid[i].mes3_3_20%>", "<%=covid[i].mes3_4_20%>",
-                        "<%=covid[i].mes3_5_20%>", "<%=covid[i].mes3_6_20%>",
-                        "<%=covid[i].mes3_7_20%>", "<%=covid[i].mes3_8_20%>",
-                        "<%=covid[i].mes3_9_20%>", "<%=covid[i].mes3_10_20%>",
-                        "<%=covid[i].mes3_11_20%>", "<%=covid[i].mes3_12_20%>",
-                        "<%=covid[i].mes3_13_20%>", "<%=covid[i].mes3_14_20%>",
-                        "<%=covid[i].mes3_15_20%>", "<%=covid[i].mes3_16_20%>",
-                        "<%=covid[i].mes3_17_20%>", "<%=covid[i].mes3_18_20%>",
-                        "<%=covid[i].mes3_19_20%>", "<%=covid[i].mes3_20_20%>",
-                        "<%=covid[i].mes3_21_20%>", "<%=covid[i].mes3_22_20%>",
-                        "<%=covid[i].mes3_23_20%>", "<%=covid[i].mes3_24_20%>",
-                        "<%=covid[i].mes3_25_20%>", "<%=covid[i].mes3_26_20%>",
-                        "<%=covid[i].mes3_27_20%>", "<%=covid[i].mes3_28_20%>",
-                        "<%=covid[i].mes3_29_20%>"
-                    ],
-                    fill: false,
+        label: "<%= covid[i].city %>",
+            data: [
+                "<%=covid[i].mes1_23_20%>", "<%=covid[i].mes1_24_20%>",
+                "<%=covid[i].mes1_25_20%>", "<%=covid[i].mes1_26_20%>",
+                "<%=covid[i].mes1_27_20%>", "<%=covid[i].mes1_28_20%>",
+                "<%=covid[i].mes1_29_20%>", "<%=covid[i].mes1_30_20%>",
+                "<%=covid[i].mes1_31_20%>", "<%=covid[i].mes2_1_20%>",
+                "<%=covid[i].mes2_2_20%>", "<%=covid[i].mes2_3_20%>",
+                "<%=covid[i].mes2_4_20%>", "<%=covid[i].mes2_5_20%>",
+                "<%=covid[i].mes2_6_20%>", "<%=covid[i].mes2_7_20%>",
+                "<%=covid[i].mes2_8_20%>", "<%=covid[i].mes2_9_20%>",
+                "<%=covid[i].mes2_10_20%>", "<%=covid[i].mes2_11_20%>",
+                "<%=covid[i].mes2_12_20%>", "<%=covid[i].mes2_13_20%>",
+                "<%=covid[i].mes2_14_20%>", "<%=covid[i].mes2_15_20%>",
+                "<%=covid[i].mes2_16_20%>", "<%=covid[i].mes2_17_20%>",
+                "<%=covid[i].mes2_18_20%>", "<%=covid[i].mes2_19_20%>",
+                "<%=covid[i].mes2_20_20%>", "<%=covid[i].mes2_21_20%>",
+                "<%=covid[i].mes2_22_20%>", "<%=covid[i].mes2_23_20%>",
+                "<%=covid[i].mes2_24_20%>", "<%=covid[i].mes2_25_20%>",
+                "<%=covid[i].mes2_26_20%>", "<%=covid[i].mes2_27_20%>",
+                "<%=covid[i].mes2_28_20%>", "<%=covid[i].mes2_29_20%>",
+                "<%=covid[i].mes3_1_20%>", "<%=covid[i].mes3_2_20%>",
+                "<%=covid[i].mes3_3_20%>", "<%=covid[i].mes3_4_20%>",
+                "<%=covid[i].mes3_5_20%>", "<%=covid[i].mes3_6_20%>",
+                "<%=covid[i].mes3_7_20%>", "<%=covid[i].mes3_8_20%>",
+                "<%=covid[i].mes3_9_20%>", "<%=covid[i].mes3_10_20%>",
+                "<%=covid[i].mes3_11_20%>", "<%=covid[i].mes3_12_20%>",
+                "<%=covid[i].mes3_13_20%>", "<%=covid[i].mes3_14_20%>",
+                "<%=covid[i].mes3_15_20%>", "<%=covid[i].mes3_16_20%>",
+                "<%=covid[i].mes3_17_20%>", "<%=covid[i].mes3_18_20%>",
+                "<%=covid[i].mes3_19_20%>", "<%=covid[i].mes3_20_20%>",
+                "<%=covid[i].mes3_21_20%>", "<%=covid[i].mes3_22_20%>",
+                "<%=covid[i].mes3_23_20%>", "<%=covid[i].mes3_24_20%>",
+                "<%=covid[i].mes3_25_20%>", "<%=covid[i].mes3_26_20%>",
+                "<%=covid[i].mes3_27_20%>", "<%=covid[i].mes3_28_20%>",
+                "<%=covid[i].mes3_29_20%>"
+            ],
+                fill: false,
                     borderColor: "rgb(<%= Math.floor(Math.random() * 255) %>, <%= Math.floor(Math.random() * 256) %>, <%= Math.floor(Math.random() * 256) %>)",
 
-                    lineTension: 0.1 <%= "}," %>
+                        lineTension: 0.1 <%= "}," %>
                     <% } %>
 
                 ]
             },
-            options: {
-                responsive: false,
-                title: {
+    options: {
+        responsive: false,
+            title: {
+            display: true,
+                text: "casos por dia Covid-19"
+        },
+        tooltips: {
+            mode: 'point',
+                intersect: false,
+                },
+
+        scales: {
+            xAxes: [{
+                display: false,
+                scaleLabel: {
                     display: true,
-                    text: "casos por dia Covid-19"
-                },
-                tooltips: {
-                    mode: 'point',
-                    intersect: false,
+                    labelString: 'tempo decorido'
                 },
 
-                scales: {
-                    xAxes: [{
-                        display: false,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'tempo decorido'
-                        },
-
-                    }],
-                    yAxes: [{
+            }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
                         display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'numero de caso'
-                        },
-
-                    }]
-                },
-                animation: {
-                    duration: 0 // general animation time
-                },
-
-                hover: {
-                    animationDuration: 0 // duration of animations when hovering an item
-                },
-
-
-                legend: {
-                    display: false,
-                    position: "bottom",
-                    align: "center",
-
-                    labels: {
-                        fontColor: "rgb(255, 99, 132)"
+                        labelString: 'numero de caso'
                     },
 
-                    onClick: function(e, legendItem) {
-                        var index = legendItem.datasetIndex;
-                        var ci = this.chart;
-                        var alreadyHidden = (ci.getDatasetMeta(index).hidden === null) ? false : ci.getDatasetMeta(index).hidden;
-                        if (!alreadyHidden) {
+                }]
+        },
+        animation: {
+            duration: 0 // general animation time
+        },
 
-                            ci.data.datasets.forEach(function(e, i) {
-                                var meta = ci.getDatasetMeta(i);
+        hover: {
+            animationDuration: 0 // duration of animations when hovering an item
+        },
 
 
-                                meta.hidden = true;
+        legend: {
+            display: false,
+                position: "bottom",
+                    align: "center",
 
-                            });
-                        }
-                        ci.getDatasetMeta(index).hidden = null;
-                        ci.update();
+                        labels: {
+                fontColor: "rgb(255, 99, 132)"
+            },
 
-                    }
-                },
+            onClick: function(e, legendItem) {
+                var index = legendItem.datasetIndex;
+                var ci = this.chart;
+                var alreadyHidden = (ci.getDatasetMeta(index).hidden === null) ? false : ci.getDatasetMeta(index).hidden;
+                if (!alreadyHidden) {
 
+                    ci.data.datasets.forEach(function (e, i) {
+                        var meta = ci.getDatasetMeta(i);
+
+
+                        meta.hidden = true;
+
+                    });
+                }
+                ci.getDatasetMeta(index).hidden = null;
+                ci.update();
 
             }
+        },
+
+
+    }
 
         });
 
-        function showHide() {
+    function showHide() {
 
-            if (myChart.options.legend.display) {
-                myChart.options.legend.display = false;
-                myChart.options.responsive = true;
-                myChart.update();
+        if (myChart.options.legend.display) {
+            myChart.options.legend.display = false;
+            myChart.options.responsive = true;
+            myChart.update();
 
 
-            } else {
-                myChart.options.legend.display = true;
-                myChart.update();
-
-            }
-
+        } else {
+            myChart.options.legend.display = true;
+            myChart.update();
 
         }
-    </script>
 
-    <% }else{ %>
 
-        <script type="text/javascript" src="js/script.js"></script>
+    }
+</script>
 
-        <%  }%>
+<% }else{ %>
 
-            </body>
+<script type="text/javascript" src="js/script.js"></script>
 
-            </html>
+<%  }%>
+
+</body>
+
+</html>
