@@ -5,11 +5,11 @@ Para obter os termos a0, an, bn e necessário integrar a partir das fórmulas ab
 
 
 
-## formula termos a0 :     ![Alt text](https://github.com/paulo-sergio45/DEV-WEB-I/blob/master/atv-6-Fourier/formulaa0.svg?raw=true "")
+## formula termo a0 :     ![Alt text](https://github.com/paulo-sergio45/DEV-WEB-I/blob/master/atv-6-Fourier/formulaa0.svg?raw=true "")
 
-## formula termos an :      ![Alt text](https://github.com/paulo-sergio45/DEV-WEB-I/blob/master/atv-6-Fourier/formulaan.svg?raw=true "")
+## formula termo an :      ![Alt text](https://github.com/paulo-sergio45/DEV-WEB-I/blob/master/atv-6-Fourier/formulaan.svg?raw=true "")
 
-## formula termos bn :     ![Alt text](https://github.com/paulo-sergio45/DEV-WEB-I/blob/master/atv-6-Fourier/formulabn.svg?raw=true "")
+## formula termo bn :     ![Alt text](https://github.com/paulo-sergio45/DEV-WEB-I/blob/master/atv-6-Fourier/formulabn.svg?raw=true "")
 
 seguindo essa formula o proximo passo e definir a funçao e os intervalos ,neste caso estou usando exemplos do wikipedia abaixo.
 
