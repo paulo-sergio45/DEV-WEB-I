@@ -6,20 +6,22 @@ function Fourier(n) {
     for (let i = 1; i < n; i++) {
        
         // sequencia e igual  s = a0 + an + bn;
-        s[i] = (2*Math.pow(Math.PI,2)/3) + Math.pow(-1,i)*(4/Math.pow(i,2)) + 0;
+        s[i] = 1 + 0 + -1/i*Math.PI ;
         
     }
 
     return s;
 }
-//supondo no intervalo de -pi a pi
-// supondo f(x) = x^2
-//a0 = (2*pi^2)/3
-//an = -1^n * 4/n^2
-//bn = 0
+//supondo no intervalo de 0 a T
+// supondo f(x) = A*x/T
+// onde T=1 e A=1
+//a0 = A
+//an = 0
+//bn = -A/n*pi
 
-s = Fourier(25);
-for (let i = 0; i < s.length; i++) {
+s = Fourier(100);
+
+for (let i = 1; i < s.length; i++) {
     console.log(s[i]);
     
 }
