@@ -5,7 +5,13 @@ function Fourier(n) {
 
     for (let i = 1; i < n; i++) {
        
-        // sequencia e igual  s = a0 + an + bn;
+        //onde deve ser alterado sendo
+        // 1 = a0
+        // 2 = an
+        // 3 = bn
+        //o resultado da sequencia e igual  s[i] = a0 + an + bn;
+        // n = i
+        
         s[i] = 1 + 0 + -1/i*Math.PI ;
         
     }
@@ -15,6 +21,7 @@ function Fourier(n) {
 //supondo no intervalo de 0 a T
 // supondo f(x) = A*x/T
 // onde T=1 e A=1
+// a integracao dos termos ficara igual a:
 //a0 = A
 //an = 0
 //bn = -A/n*pi
