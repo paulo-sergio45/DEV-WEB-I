@@ -1,4 +1,4 @@
-A forma geral da série é:
+
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="52.404ex" height="6.843ex" style="vertical-align: -3.005ex;" viewBox="0 -1652.5 22562.6 2946.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">{\displaystyle T(t)={\frac {a_{0}}{2}}+\sum _{n=1}^{\infty }\left[a_{n}\cdot \cos \left({\frac {n\pi t}{L}}\right)+b_{n}\cdot \operatorname {sen} \left({\frac {n\pi t}{L}}\right)\right]}</title>
 <defs aria-hidden="true">
