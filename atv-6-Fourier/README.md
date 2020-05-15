@@ -11,5 +11,9 @@ Para obter os termos a0, an, bn e necessário integrar a partir das fórmulas ab
 
 ## formula termos bn :     ![Alt text](https://github.com/paulo-sergio45/DEV-WEB-I/blob/master/atv-6-Fourier/formulabn.svg?raw=true "")
 
+seguindo essa formula o proximo passo e definir a funçao e os intervalos ,neste caso estou usando exemplos do wikipedia abaixo.
+
+ ![Alt text](https://github.com/paulo-sergio45/DEV-WEB-I/blob/master/atv-6-Fourier/SharedScreenshot.jpg?raw=true "")
+
 
 fonte: https://pt.wikipedia.org/wiki/S%C3%A9rie_de_Fourier
