@@ -12,7 +12,7 @@ function Fourier(n) {
         //o resultado da sequencia e igual  s[i] = a0 + an + bn;
         // n = i
         
-        s[i] = 1 + 0 + -1/i*Math.PI ;
+        s[i] =( 1 )+( 0 )+( -1/i*Math.PI );
         
     }
 
@@ -26,6 +26,8 @@ function Fourier(n) {
 //an = 0
 //bn = -A/n*pi
 
+
+//quantos numeros da sequecia aki foi escolhido 100
 s = Fourier(100);
 
 for (let i = 1; i < s.length; i++) {
