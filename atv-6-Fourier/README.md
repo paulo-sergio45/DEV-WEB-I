@@ -17,7 +17,8 @@ seguindo essa formula o proximo passo e definir a funçao e os intervalos ,neste
 
 Para o código gerar a sequência de Fourier e necessário alterar os valores da função geral que representa a0, an, ab que se encontra dentro do primeiro FOR representado abaixo:
 
-``` // 1º = a0, 2º = an, 3º = bn
+```
+1º = a0, 2º = an, 3º = bn
 s[i] =( 1 )+( 0 )+( -1/i*Math.PI );
 ```
 
