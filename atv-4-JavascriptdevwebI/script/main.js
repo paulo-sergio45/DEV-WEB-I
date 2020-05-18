@@ -1,23 +1,25 @@
-function incluiNegoci() {
-    var datainpu = document.querySelector("input#data");
-    var quantidadeinpu = document.querySelector("input#quantidade");
-    var valorinpu = document.querySelector("input#valor");
-    var tabela = document.querySelector("tbody#tabatual");
-    console.log(tabela);
+document.querySelector(".form").addEventListener("submit",function(event){
+    console.log(event);
+    event.preventDefault();
+    incluiNegoci();
+})
 
-    console.log(quantidadeinpu.value);
+function incluiNegoci() {
+    var data = document.querySelector("input#data");
+    var quantidade = document.querySelector("input#quantidade");
+    var valor = document.querySelector("input#valor");
+    var tabela = document.querySelector("tbody#tabatual");
+    var total = quantidade.value*valor.value;
 
     var tr = document.createElement("tr");
-    var tddata = document.createElement("td");
-    var tdquantidade = document.createElement("td");
-    var tdvalor = document.createElement("td");
-
-
-    tddata.appendChild(document.createTextNode(datainpu.value))
-    tdquantidade.appendChild(document.createTextNode(quantidadeinpu.value))
-    tdvalor.appendChild(document.createTextNode(valorinpu.value))
-
-
+ 
+ 
+tr.innerHTML = `
+<td>${data.value}</td>
+<td>${quantidade.value}</td>
+<td>${valor.value}</td>
+<td>${total}</td>
+`;
 
     if (tabela.children.length === 0) {
         tabela.insertBefore(tr, null);
@@ -25,8 +27,6 @@ function incluiNegoci() {
         tabela.insertBefore(tr, tabela.children[0]);
     }
 
-    tr.insertBefore(tddata, null);
-    tr.insertBefore(tdquantidade, null);
-    tr.insertBefore(tdvalor, null);
+   
 
 }

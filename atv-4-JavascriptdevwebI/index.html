@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Negociações</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -14,30 +14,31 @@
     <h1 class="text-center">Negociações</h1>
 
     <form class="form">
-
-        <div class="form-group">
+        <div class="row ">
+        <div class="input-field col s12 m12 l12">
             <label for="data">Data</label>
-            <input type="date" id="data" class="form-control" required autofocus />
+            <input type="date" id="data" name="data"  class="validate" required autofocus />
         </div>
 
-        <div class="form-group">
+        <div class="input-field col s12 m12 l12">
             <label for="quantidade">Quantidade</label>
-            <input type="number" min="1" step="1" id="quantidade" class="form-control" value="1" required />
+            <input type="number" min="1" step="1" id="quantidade"  name="quantidade" class="validate" value="1" required />
         </div>
 
-        <div class="form-group">
+        <div class="input-field col s12 m12 l12">
             <label for="valor">Valor</label>
-            <input id="valor" type="number" class="form-control" min="0.01" step="0.01" value="0.0" required />
+            <input id="valor" name="valor" type="number"  class="validate" min="0.01" step="0.01" value="0.0" required />
         </div>
 
-        <button class="btn btn-primary" type="button" onclick="incluiNegoci()">Incluir</button>
+        <button class="btn waves-effect waves-light blue" type="submit" >Incluir</button>
+    </div>
     </form>
 
     <div class="text-center">
-        <button class="btn btn-primary text-center" type="button">
+        <button class="btn waves-effect waves-light blue" type="button">
             Importar Negociações
         </button>
-        <button class="btn btn-primary text-center" type="button">
+        <button class="btn waves-effect waves-light blue" type="button">
             Apagar
         </button>
     </div>
@@ -50,7 +51,7 @@
                 <th>DATA</th>
                 <th>QUANTIDADE</th>
                 <th>VALOR</th>
-                <th>VOLUME</th>
+                <th>TOTAL</th>
             </tr>
         </thead>
 
@@ -61,6 +62,7 @@
         </tfoot>
     </table>
     <script src="script/main.js"></script>
+    <script src="script/materialize.min.js"></script>
 </body>
 
 </html>
