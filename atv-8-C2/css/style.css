@@ -1,5 +1,8 @@
 div.container {
     min-width: 90%;
-    
+    background-color: white;
 }
-
+form#formapessoa {
+width: 95%;
+margin: 0 auto;
+}

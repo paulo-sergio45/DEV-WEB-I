@@ -4,118 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <title>Negociações</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body class="container">
+<body class="fafafa grey lighten-5 ">
+    <div class="container z-depth-3">
 
-    <h1 class="text-center">Negociações</h1>
+        <h1 class="center-align">Negociações</h1>
 
-    <form class="form" method="POST">
-        <div class="row ">
-            <div class="input-field col s12 m12 l12">
-                <label for="nome">nome</label>
-                <input type="text" id="nome" name="nome" class=" validate" required>
-            </div>
-            <div class="input-field col s12 m12 l12">
+        <form class="form" id="formapessoa" method="POST">
+            <div class="row ">
+                <div class="input-field col s12 m12 l12">
+                    <label for="nome">nome</label>
+                    <input type="text" id="nome" name="nome" class=" validate" required>
+                </div>
+                <div class="input-field col s12 m12 l12">
 
-                <label for="cep">CEP</label>
-                <input type="number" id="cep" min="0" name="cep" class="validate" required />
-            </div>
-            <div class="input-field col s12 m6 l6">
-                <label for="estado">Estado</label>
-                <input type="text" id="estado" name="estado" class="validate" required />
-            </div>
-            <div class="input-field col s12 m6 l6">
-                <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" name="cidade" class="validate" required />
-            </div>
+                    <label for="cep">CEP</label>
+                    <input type="number" id="cep" min="0" name="cep" class="validate" required />
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <label for="estado">Estado</label>
+                    <input type="text" id="estado" name="estado" class="validate" required />
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" class="validate" required />
+                </div>
 
 
-            <div class="input-field col s12 m12 l12">
-                <label for="rua">Rua / Avenida </label>
-                <input type="text" id="rua" name="rua" class="validate" required />
+                <div class="input-field col s12 m12 l12">
+                    <label for="rua">Rua / Avenida </label>
+                    <input type="text" id="rua" name="rua" class="validate" required />
+                </div>
+
+                <div class="input-field col s12  m8 l6">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" class="validate" required />
+                </div>
+
+                <div class="input-field col s12 m4 l6">
+                    <label for="numero">Número </label>
+                    <input type="number" min="0" id="numero" name="numero" class="validate" required />
+                </div>
+
+                <div class="input-field col s12 m5 l4">
+                    <label for="celular">Telefone celular</label>
+                    <input id="celular" name="celular" type="number" min="0" class="validate" required />
+                </div>
+                <div class="input-field col s6 m4 l4">
+                    <label for="peso">peso</label>
+                    <input id="peso" name="peso" type="number" min="0" step="0.1" class="validate" required />
+                </div>
+                <div class="input-field col s6 m3 l4">
+                    <label for="altura">altura</label>
+                    <input id="altura" name="altura" type="number" min="0" step="0.1" class="validate" required />
+                </div>
+                <div class="input-field col s12 m12 l12">
+                    <select multiple required>
+                        <option value="" disabled>Ecolha as opçoes</option>
+                        <option value="1">Pessoas idosas</option>
+                        <option value="2"> doença cardíaca </option>
+                        <option value="2"> doença pulmonar</option>
+                        <option value="2"> neoplasias ou hipertensão arterial</option>
+                        <option value="2"> outras doenças crónicas </option>
+                        <option value="3"> tratamentos de quimioterapia</option>
+                        <option value="3"> artrite reumatoide</option>
+                        <option value="3"> lúpus</option>
+                        <option value="3">esclerose múltipla </option>
+                        <option value="3">doenças inflamatórias do intestino </option>
+                        <option value="3">infeção VIH/sida</option>
+                        <option value="3">doentes transplantados </option>
+                        <option value="3"> Imunodeficiências e doenças autoimunes</option>
+                        <option value="3">outras </option>
+                    </select>
+                    <label>problemas de saúde</label>
+                </div>
+
+                <div class="center-align input-field col s12 m12 l12">
+                    <div class="center-align input-field col s12 m6 l4">
+                        <button class="btn  waves-effect waves-light green" type="submit">Incluir <i
+                                class=" material-icons right">send</i></button>
+                    </div>
+                
+                    <div class="center-align input-field col s12 m6 l4">
+                        <button class="btn waves-effect waves-light red" type="button">
+                            Apagar<i class=" material-icons right">delete</i>
+                        </button>
+                    </div> 
+                       <div class="center-align input-field col s12 m12 l4">
+                        <button class="btn  waves-effect waves-light blue" type="button">
+                            Importar Negociações<i class=" material-icons right">file_download</i>
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <div class="input-field col s12  m8 l6">
-                <label for="bairro">Bairro</label>
-                <input type="text" id="bairro" name="bairro" class="validate" required />
-            </div>
+        </form>
 
-            <div class="input-field col s12 m4 l6">
-                <label for="numero">Número </label>
-                <input type="number" min="0" id="numero" name="numero" class="validate" required />
-            </div>
 
-            <div class="input-field col s12 m5 l4">
-                <label for="celular">Telefone celular</label>
-                <input id="celular" name="celular" type="number" min="0" class="validate" required />
-            </div>
-            <div class="input-field col s6 m4 l4">
-                <label for="peso">peso</label>
-                <input id="peso" name="peso" type="number" min="0" step="0.1" class="validate" required />
-            </div>
-            <div class="input-field col s6 m3 l4">
-                <label for="altura">altura</label>
-                <input id="altura" name="altura" type="number" min="0" step="0.1" class="validate" required />
-            </div>
-            <div class="input-field col s12 m12 l12">
-                <select multiple required>
-                    <option value="" disabled >Ecolha as opçoes</option>
-                    <option value="1">Pessoas idosas</option>
-                    <option value="2"> doença cardíaca </option>
-                    <option value="2"> doença pulmonar</option>
-                    <option value="2"> neoplasias ou hipertensão arterial</option>
-                    <option value="2"> outras doenças crónicas </option>
-                    <option value="3"> tratamentos de quimioterapia</option>
-                    <option value="3"> artrite reumatoide</option>
-                    <option value="3"> lúpus</option>
-                    <option value="3">esclerose múltipla </option>
-                    <option value="3">doenças inflamatórias do intestino </option>
-                    <option value="3">infeção VIH/sida</option>
-                    <option value="3">doentes transplantados </option>
-                    <option value="3"> Imunodeficiências e doenças autoimunes</option>
-                    <option value="3">outras </option>
-                </select>
-                <label>problemas de saúde</label>
-            </div>
 
-            <div class="input-field col s12 m12 l12">
-                <button class="btn waves-effect waves-light blue" type="submit">Incluir</button>
-            </div>
-        </div>
 
-    </form>
 
-    <div class="text-center">
-        <button class="btn waves-effect waves-light blue" type="button">
-            Importar Negociações
-        </button>
-        <button class="btn waves-effect waves-light blue" type="button">
-            Apagar
-        </button>
     </div>
+
     <br>
     <br>
+    <div class="container z-depth-3">
+        <table class=" table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th class="center-align">DATA</th>
+                    <th class="center-align">QUANTIDADE</th>
+                    <th class="center-align">VALOR</th>
+                    <th class="center-align">TOTAL</th>
+                </tr>
+            </thead>
 
-    <table class="table table-hover table-bordered">
-        <thead>
-            <tr>
-                <th>DATA</th>
-                <th>QUANTIDADE</th>
-                <th>VALOR</th>
-                <th>TOTAL</th>
-            </tr>
-        </thead>
+            <tbody id="tabatual">
 
-        <tbody id="tabatual">
-        </tbody>
+            </tbody>
 
-        <tfoot>
-        </tfoot>
-    </table>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+
     <script src="script/main.js"></script>
     <script src="script/materialize.min.js"></script>
 </body>
