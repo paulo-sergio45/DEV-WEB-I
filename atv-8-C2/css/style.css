@@ -2,17 +2,20 @@ div.container {
     min-width: 90%;
     background-color: white;
 }
+
 form#formapessoa {
-width: 95%;
-margin: 0 auto;
+    width: 95%;
+    margin: 0 auto;
 }
+
 .waves-effect.waves-blue .waves-ripple {
     /* The alpha value allows the text and background color
     of the button to still show through. */
-     background-color: #2196f3;
-   }
+    background-color: #2196f3;
+}
 
-a#dropdownp{
+a#dropdownp,
+a#dropdownp2 {
     background-color: transparent;
     color: #d1d1d1;
     text-align: left;
@@ -29,3 +32,4 @@ a#dropdownp{
     box-sizing: content-box;
     transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
 }
+
