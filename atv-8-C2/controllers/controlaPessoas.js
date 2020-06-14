@@ -6,7 +6,6 @@ var pessoas = [];
 document.querySelector("#formapessoa").addEventListener("submit", function (event) {
     let saude = [];
     let vet = document.querySelectorAll("input.saude1")
-    console.log(vet);
     for (let i = 0; i < vet.length; ++i) {
         if (vet[i].checked === true) {
             saude[i] = vet[i].value;
@@ -16,9 +15,6 @@ document.querySelector("#formapessoa").addEventListener("submit", function (even
     saude = saude.filter(function (elem) {
         return elem != null;
     });
-
-    console.log(saude);
-
 
     cont++;
     let pessoa = Pessoa.criaPessoa(cont,
@@ -44,7 +40,6 @@ document.querySelector("#formapessoa").addEventListener("submit", function (even
 document.querySelector("#formapessoae").addEventListener("submit", function (event) {
     let saude = [];
     let vet = document.querySelectorAll("input.saude2")
-    console.log(vet);
 
     for (let i = 0; i < vet.length; ++i) {
         if (vet[i].checked === true) {
@@ -55,7 +50,6 @@ document.querySelector("#formapessoae").addEventListener("submit", function (eve
         return elem != null;
     });
     let id = document.querySelector("input#ide").value - 1;
-    console.log(pessoas[id]);
 
     pessoas[id].nome = document.querySelector("input#nomee").value;
     pessoas[id].cep = document.querySelector("input#cepe").value;
@@ -69,9 +63,6 @@ document.querySelector("#formapessoae").addEventListener("submit", function (eve
     pessoas[id].altura = document.querySelector("input#alturae").value;
     pessoas[id].probSaude = saude;
 
-    console.log(pessoas[id]);
-    
-
     event.preventDefault();
 
 });
@@ -81,8 +72,26 @@ function editaPessoas(id) {
 
 }
 function deletaPessoas(id) {
-    pessoas.splice(id - 1, 1);
-    deletaPessoa(pessoas[id - 1])
+    let url = new URL(window.location.href);
+
+    url.searchParams.append('id', id);
+    
+    url.searchParams.set('id', id);
+    
+
+    window.history.pushState({}, document.title, url);
+}
+function removePessoas(id) {
+    for (let i = 0; i < pessoas.length; ++i) {
+        if ( pessoas[i].id == id) {
+            pessoas[i] = null;
+        }
+    }  pessoas = pessoas.filter(function (elem) {
+        return elem != null;
+    });
+    console.log(pessoas);
+    
+  
 }
 function visializarPessoas(id) {
     visializarPessoa(pessoas[id - 1])

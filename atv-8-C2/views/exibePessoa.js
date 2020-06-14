@@ -3,6 +3,7 @@ function manipulaPessoa(pessoa) {
     var tabela = document.querySelector("tbody#tabpessoa");
 
     var tr = document.createElement("tr");
+    tr.setAttribute("id", "tr"+pessoa.getId());
 
     tr.innerHTML = `
 <td>${pessoa.getNome()}</td>
@@ -33,91 +34,100 @@ function editaPessoa(pessoa) {
     document.querySelector("#telefonee").value = pessoa.telefone
     document.querySelector("#pesoe").value = pessoa.peso
     document.querySelector("#alturae").value = pessoa.altura
-    
-    document.querySelector("#saude1").checked =false;
-    document.querySelector("#saude3").checked =false;
-    document.querySelector("#saude4").checked =false;
-    document.querySelector("#saude5").checked =false;
-    document.querySelector("#saude6").checked =false; 
-    document.querySelector("#saude7").checked =false; 
-    document.querySelector("#saude8").checked =false; 
-    document.querySelector("#saude9").checked =false; 
-    document.querySelector("#saude10").checked =false; 
-    document.querySelector("#saude11").checked =false;
-    document.querySelector("#saude12").checked =false; 
-    document.querySelector("#saude13").checked =false; 
-    document.querySelector("#saude14").checked =false; 
+
+    document.querySelector("#saude1").checked = false;
+    document.querySelector("#saude3").checked = false;
+    document.querySelector("#saude4").checked = false;
+    document.querySelector("#saude5").checked = false;
+    document.querySelector("#saude6").checked = false;
+    document.querySelector("#saude7").checked = false;
+    document.querySelector("#saude8").checked = false;
+    document.querySelector("#saude9").checked = false;
+    document.querySelector("#saude10").checked = false;
+    document.querySelector("#saude11").checked = false;
+    document.querySelector("#saude12").checked = false;
+    document.querySelector("#saude13").checked = false;
+    document.querySelector("#saude14").checked = false;
 
     for (let i = 0; i < pessoa.probSaude.length; i++) {
-        console.log("oi"+pessoa.probSaude[i]);
-    
+
         switch (pessoa.probSaude[i]) {
             case "1":
                 document.querySelector("#saude1").checked = true;
-                console.log("1");
+
                 break;
             case "2":
                 document.querySelector("#saude2").checked = true;
-                console.log("2");
+
                 break;
             case "3":
                 document.querySelector("#saude3").checked = true;
-                console.log("3");
+
                 break;
             case "4":
                 document.querySelector("#saude4").checked = true;
-                console.log("4");
+
                 break;
             case "5":
                 document.querySelector("#saude5").checked = true;
-                console.log("5");
+
                 break;
             case "6":
-                document.querySelector("#saude6").checked = true; 
-                console.log("6");
+                document.querySelector("#saude6").checked = true;
+
                 break;
             case "7":
                 document.querySelector("#saude7").checked = true;
-                console.log("7"); 
+
                 break;
             case "8":
-                document.querySelector("#saude8").checked = true; 
-                console.log("8");
+                document.querySelector("#saude8").checked = true;
+
                 break;
             case "9":
-                document.querySelector("#saude9").checked = true; 
-                console.log("9");
+                document.querySelector("#saude9").checked = true;
+
                 break;
             case "10":
-                document.querySelector("#saude10").checked = true; 
-                console.log("10");
+                document.querySelector("#saude10").checked = true;
+
                 break;
             case "11":
                 document.querySelector("#saude11").checked = true;
-                console.log("11"); 
+
                 break;
             case "12":
-                document.querySelector("#saude12").checked = true; 
-                console.log("12");
+                document.querySelector("#saude12").checked = true;
+
                 break;
             case "13":
-                document.querySelector("#saude13").checked = true; 
-                console.log("13");
+                document.querySelector("#saude13").checked = true;
+
                 break;
             case "14":
-                document.querySelector("#saude14").checked = true; 
-                console.log("14");
+                document.querySelector("#saude14").checked = true;
+
                 break;
 
             default:
-                  
+
         }
     }
 
 
 }
-function deletaPessoa(pessoa) {
-    console.log("deletaPessoa");
+function deletaPessoa() {
+    let url = new URL(window.location.href);
+
+    let id = url.searchParams.get("id");
+     
+    document.querySelector("tr#tr"+id).remove(); 
+    
+    url.searchParams.delete('id');
+
+    window.history.pushState({}, document.title, url);
+
+    removePessoas(id)
 }
 function visializarPessoa(pessoa) {
 
@@ -132,42 +142,42 @@ function visializarPessoa(pessoa) {
     document.querySelector("P#telefonev").innerHTML = pessoa.telefone
     document.querySelector("P#pesov").innerHTML = pessoa.peso
     document.querySelector("P#alturav").innerHTML = pessoa.altura
-    let texto = " ";  
-    let textos = " ";  
-    
+    let texto = " ";
+    let textos = " ";
+
     for (let i = 0; i < pessoa.probSaude.length; i++) {
-       
+
         switch (pessoa.probSaude[i]) {
             case "1":
                 textos = texto.concat("<br> Pessoas idosas");
                 texto = textos;
                 break;
             case "2":
-                textos =texto.concat("<br> Doença cardíaca");
+                textos = texto.concat("<br> Doença cardíaca");
                 texto = textos;
                 break;
             case "3":
-                textos =texto.concat("<br> Doença pulmonar");
+                textos = texto.concat("<br> Doença pulmonar");
                 texto = textos;
                 break;
             case "4":
-                textos =texto.concat("<br> Neoplasias ou hipertensão arterial");
+                textos = texto.concat("<br> Neoplasias ou hipertensão arterial");
                 texto = textos;
                 break;
             case "5":
-                textos =texto.concat("<br> Outras doenças crónicas");
+                textos = texto.concat("<br> Outras doenças crónicas");
                 texto = textos;
                 break;
             case "6":
-                textos =texto.concat("<br> Tratamentos de quimioterapia");
+                textos = texto.concat("<br> Tratamentos de quimioterapia");
                 texto = textos;
                 break;
             case "7":
-                textos =texto.concat("<br> Artrite reumatoide");
+                textos = texto.concat("<br> Artrite reumatoide");
                 texto = textos;
                 break;
             case "8":
-                textos =texto.concat("<br>  Lúpus");
+                textos = texto.concat("<br>  Lúpus");
                 texto = textos;
                 break;
             case "9":
@@ -196,10 +206,9 @@ function visializarPessoa(pessoa) {
                 break;
 
             default:
-                console.log(`erro`);
         }
     }
-    
 
-    document.querySelector("P#saudev").innerHTML =  texto;
+
+    document.querySelector("P#saudev").innerHTML = texto;
 }
