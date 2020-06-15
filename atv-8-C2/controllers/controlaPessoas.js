@@ -66,7 +66,7 @@ document.querySelector("#formapessoae").addEventListener("submit", function (eve
     event.preventDefault();
 
 });
-
+///utilizado para pegar o post e get usando javascript vanilla
 function editaPessoas(id) {
     editaPessoa(pessoas[id - 1])
 
@@ -75,25 +75,24 @@ function deletaPessoas(id) {
     let url = new URL(window.location.href);
 
     url.searchParams.append('id', id);
-    
+
     url.searchParams.set('id', id);
-    
+
 
     window.history.pushState({}, document.title, url);
 }
 function removePessoas(id) {
     for (let i = 0; i < pessoas.length; ++i) {
-        if ( pessoas[i].id == id) {
+        if (pessoas[i].id == id) {
             pessoas[i] = null;
         }
-    }  pessoas = pessoas.filter(function (elem) {
+    } pessoas = pessoas.filter(function (elem) {
         return elem != null;
     });
     console.log(pessoas);
-    
-  
+
+
 }
 function visializarPessoas(id) {
     visializarPessoa(pessoas[id - 1])
 }
-///utilizado para pegar o post e get usando javascript vanilla

@@ -3,7 +3,7 @@ function manipulaPessoa(pessoa) {
     var tabela = document.querySelector("tbody#tabpessoa");
 
     var tr = document.createElement("tr");
-    tr.setAttribute("id", "tr"+pessoa.getId());
+    tr.setAttribute("id", "tr" + pessoa.getId());
 
     tr.innerHTML = `
 <td>${pessoa.getNome()}</td>
@@ -120,9 +120,9 @@ function deletaPessoa() {
     let url = new URL(window.location.href);
 
     let id = url.searchParams.get("id");
-     
-    document.querySelector("tr#tr"+id).remove(); 
-    
+
+    document.querySelector("tr#tr" + id).remove();
+
     url.searchParams.delete('id');
 
     window.history.pushState({}, document.title, url);

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   let options = {
     coverTrigger: false,
     closeOnClick: false
@@ -15,11 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.querySelector("#dropdownp").addEventListener("blur", function (event) {
-  
-     document.querySelector("#dropdownlabel").classList.toggle("active");
-
- 
+  document.querySelector("#dropdownlabel").classList.toggle("active");
   event.preventDefault();
-  console.log(event.target);
-  
+
 })

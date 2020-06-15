@@ -89,11 +89,11 @@ class Pessoa {
     }
 
     criaPessoa(id, nome, cep, estado, cidade, rua, bairro, numero, telefone, peso, altura, probSaude) {
-        
-        let pessoa = new Pessoa(id,nome, cep, estado, cidade, rua, bairro, numero, telefone, peso, altura, probSaude);
+
+        let pessoa = new Pessoa(id, nome, cep, estado, cidade, rua, bairro, numero, telefone, peso, altura, probSaude);
         return pessoa;
     }
 
-    
+
 
 }
