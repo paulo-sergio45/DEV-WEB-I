@@ -15,83 +15,77 @@ class Pessoa {
         this.probSaude = probSaude
     }
 
-    getId() {
+    get getId() {
         return this.id;
     }
-    setId(id) {
+    set setId(id) {
         this.id = id;
     }
-    getNome() {
+    get getNome() {
         return this.nome;
     }
-    setNome(nome) {
+    set setNome(nome) {
         this.nome = nome;
     }
-    getCep() {
+    get getCep() {
         return this.cep;
     }
-    setCep(cep) {
+    set setCep(cep) {
         this.cep = cep;
     }
-    getEstado() {
+    get getEstado() {
         return this.estado;
     }
-    setEstado(estado) {
+    set setEstado(estado) {
         this.estado = estado;
     }
-    getCidade() {
+    get getCidade() {
         return this.cidade;
     }
-    setCidade(cidade) {
+    set setCidade(cidade) {
         this.cidade = cidade;
     }
-    getRua() {
+    get getRua() {
         return this.rua;
     }
-    setRua(rua) {
+    set setRua(rua) {
         this.rua = rua;
     }
-    getBairro() {
+    get getBairro() {
         return this.bairro;
     }
-    setBairro(bairro) {
+    set setBairro(bairro) {
         this.bairro = bairro;
     }
-    getNumero() {
+    get getNumero() {
         return this.numero;
     }
-    setNumero(numero) {
+    set setNumero(numero) {
         this.numero = numero;
     }
-    getTelefone() {
+    get getTelefone() {
         return this.telefone;
     }
-    setTelefone(telefone) {
+    set setTelefone(telefone) {
         this.telefone = telefone;
     }
-    getPeso() {
+    get getPeso() {
         return this.peso;
     }
-    setPeso(peso) {
+    set setPeso(peso) {
         this.peso = peso;
     }
-    getAltura() {
+    get getAltura() {
         return this.altura;
     }
-    setAltura(altura) {
+    set setAltura(altura) {
         this.altura = altura;
     }
-    getProbSaude() {
+    get getProbSaude() {
         return this.probSaude;
     }
-    setProbSaude(probSaude) {
+    set setProbSaude(probSaude) {
         this.probSaude = probSaude;
-    }
-
-    criaPessoa(id, nome, cep, estado, cidade, rua, bairro, numero, telefone, peso, altura, probSaude) {
-
-        let pessoa = new Pessoa(id, nome, cep, estado, cidade, rua, bairro, numero, telefone, peso, altura, probSaude);
-        return pessoa;
     }
 
 

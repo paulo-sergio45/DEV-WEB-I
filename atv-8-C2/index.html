@@ -13,9 +13,9 @@
 <body class="fafafa grey lighten-5 ">
     <div class="container z-depth-3">
 
-        <h1 class="center-align">Mapeamento de casos</h1>
+        <h3 class="center-align">Cadastro Pessoa</h3>
 
-        <form class="form" id="formapessoa" method="POST">
+        <form class="form" id="formapessoa" onsubmit=controlaPessoas.NovaPessoa(event)>
             <div class="row ">
                 <div class="input-field col s12 m12 l12">
                     <label for="nome">Nome</label>
@@ -168,21 +168,17 @@
                 </div>
 
                 <div class="center-align input-field col s12 m12 l12">
-                    <div class="center-align input-field col s12 m6 l4">
+                    <div class="center-align input-field col s12 m6 l6">
                         <button class="btn  waves-effect waves-light green" type="submit">Incluir <i
                                 class=" material-icons right">send</i></button>
                     </div>
 
-                    <div class="center-align input-field col s12 m6 l4">
+                    <div class="center-align input-field col s12 m6 l6">
                         <button class="btn waves-effect waves-light red" type="reset">
                             Apagar<i class=" material-icons right">delete</i>
                         </button>
                     </div>
-                    <div class="center-align input-field col s12 m12 l4">
-                        <button class="btn  waves-effect waves-light blue" type="button">
-                            Importar Negociações<i class=" material-icons right">file_download</i>
-                        </button>
-                    </div>
+
                 </div>
             </div>
 
@@ -193,11 +189,11 @@
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h5>editar informaçoes</h5>
-                <form class="form" id="formapessoae" method="POST">
+                <form class="form" id="formapessoae" onsubmit="controlaPessoas.alteraPessoa(event)">
                     <div class="row ">
 
                         <div class="input-field col s12 m12 l12" style="display: none;">
-                            <label for="ide">id</label>
+                            <label for="ide" class="active">id</label>
                             <input type="text" id="ide" name="ide">
                         </div>
                         <div class="input-field col s12 m12 l12">
@@ -355,7 +351,7 @@
 
 
                         <div class="center-align input-field col s12 m12 12">
-                            <button class="btn c waves-effect waves-light blue " type="submit">Salvar <i
+                            <button class="btn c waves-effect waves-light blue modal-close" type="submit">Salvar <i
                                     class=" material-icons right">save</i></button>
                         </div>
 
@@ -380,61 +376,111 @@
             </div>
             <div class="modal-footer">
 
-                <a class="modal-close waves-effect waves-red btn-flat" onclick="deletaPessoa()">deletar</a>
+                <a class="modal-close waves-effect waves-red btn-flat"
+                    onclick=controlaPessoas.deletaPessoa()>deletar</a>
                 <a class="modal-close waves-effect waves-green btn-flat">cancelar</a>
             </div>
         </div>
 
         <div id="modal3" class="modal">
             <div class="modal-content row">
-                <h5>visializar informaçoes</h5>
+                <h5>Visializar Informaçoes</h5>
+
                 <div class="col s12 m12 12">
-                    <h5>Nome:</h5>
-                    <p id="nomev">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6>Nome:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="nomev"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5>Id:</h5>
-                    <p id="idv">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6>Id:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="idv"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5>Cep:</h5>
-                    <p id="cepv">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6>Cep:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="cepv"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5> Estado:</h5>
-                    <p id="estadov">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6> Estado:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="estadov"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5> Cidade:</h5>
-                    <p id="cidadev">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6> Cidade:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="cidadev"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5> Rua / Avenida:</h5>
-                    <p id="ruav">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6> Rua / Avenida:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="ruav"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5> Bairro:</h5>
-                    <p id="bairrov">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6> Bairro:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="bairrov"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5> Numero:</h5>
-                    <p id="numerov">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6> Numero:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="numerov"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5> Telefone celular:</h5>
-                    <p id="telefonev">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6> Telefone celular:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="telefonev"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5> Peso:</h5>
-                    <p id="pesov">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6> Peso:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="pesov"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5> Altura:</h5>
-                    <p id="alturav">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6> Altura:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="alturav"></p>
+                    </div>
                 </div>
                 <div class="col s12 m12 12">
-                    <h5> Problemas de Saúde:</h5>
-                    <p id="saudev">nome</p>
+                    <div class="col s4 m4 l4">
+                        <h6> Problemas de Saúde:</h6>
+                    </div>
+                    <div class="col s8 m8 l8">
+                        <p id="saudev"></p>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -475,6 +521,10 @@
     <script src="controllers/controlaPessoas.js"></script>
     <script src="script/main.js"></script>
     <script src="script/materialize.min.js"></script>
+    <script src="models/ListaPessoas.js"></script>
+    <script>
+        const controlaPessoas = new ControlaPessoas();
+    </script>
 </body>
 
 </html>
