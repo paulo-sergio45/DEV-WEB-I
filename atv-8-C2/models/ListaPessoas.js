@@ -7,9 +7,9 @@ class ListaPessoas {
     }
 
     
-    setPessoas(negociacao) {
+    setPessoas(Pessoa) {
 
-        this.listaPessoas.push(negociacao);
+        this.listaPessoas.push(Pessoa);
 
     }
 
